@@ -1,0 +1,103 @@
+@import "variables.scss";
+
+/** Main
+/*_________________________________________________________________*/
+
+/*! Container
+/*!_________________________________________________________________*/
+.container__header{width: 100%; max-width: 1800px; @include blockCenter;}
+
+/*! Header
+/*!_________________________________________________________________*/
+.header{background-color: black; width: 100vw;}
+.header__wrapper{display: flex; justify-content: space-between; align-items: center; padding: .5% 0 .5% 0;
+    &__logo{margin-left: 1%;
+        &-img{width: 100px;}
+    }
+    &__nav{
+        &__link{font-size: 20px;
+            &:not(:last-child){margin-right: 25px;}
+            &:visited{color: $pink;}
+            &:active{color: $pink;}
+            &:hover{color: $green; border-bottom: 1px $green solid; transition: color border-bottom .5s linear; padding-bottom: 5px;}
+        }
+        div{display: flex; @include flexCenter; margin-top: 2%; border-top: solid 1px $pink; padding-top: 1%; display: none;}
+    }
+    &-svg{
+        &__svg-wrapper{width: 50px; height: 50px;
+            &:not(:last-child){margin-right: 25px;}
+            &__svg{width: 50px; height: 50px; fill: $green;
+            &:hover{fill: $greenHover; transition: .5s;}
+            }
+        }
+    }
+    &__contacts{display: flex; flex-direction: column; font-size: 17px; margin-right: 1%;
+        &__contact{text-align: right;
+            &__text{margin-right: 15px;}
+            &__text__phone{}
+        }
+    }
+}
+
+/*! Section Intro
+/*!_________________________________________________________________*/
+.section__intro{background: url("../img/bg/section_one.jpg") no-repeat; height: 900px; width: 100vw;
+    &__content-wrapper{display: flex; flex-direction: column; align-items: center; padding-top: 150px;
+        &__title-h1{font-size: 100px; margin-bottom: 150px;}
+        &__title{font-size: 70px;}
+        &__btn{margin-top: 100px; font-size: 25px; @include btnPadding;
+            &:visited{color: black;}
+            &:active{color: black;}
+            &:hover{color: $green; background-color: rgba(148, 192, 42, 0); transition: .5s linear;}
+        }
+    }
+}
+
+/*! Section About Us
+/*!_________________________________________________________________*/
+.section__about-us{background-color: black; width: 100vw; padding: 25px 0 25px 0;
+    &__content-wrapper{display: flex; @include flexCenter;
+        &__item{width: 25%; display: flex; flex-direction: column; justify-content: baseline; align-items: center; border: solid 1px $green; border-radius: 10px; padding: 15px;
+            &:not(:last-child){margin-right: 5%;}
+            &__svg-wrapper{width: 50px; height: 50px; display: flex; margin-bottom: 15px;
+                &__svg{width: 50px; height: 50px; fill: $green;}
+            }
+            &__text{text-align: center; height: 70px; color: $pink;}
+        }
+    }
+}
+
+/*! Section Club Detail
+/*!_________________________________________________________________*/
+.section__club-detail{
+    &__content-wrapper{display: flex; @include flexCenter;
+        &__club{display: flex; flex-direction: column; @include flexCenter; width: 50%;
+        }
+    }
+}
+
+/*! Section Find Us
+/*!_________________________________________________________________*/
+.section__find-us{
+    &__content-wrapper{display: flex; @include flexCenter;
+        &__club{display: flex; flex-direction: column; @include flexCenter; width: 50%;
+        }
+    }
+}
+
+/*! Footer
+/*!_________________________________________________________________*/
+.footer{@extend .header;}
+.footer__wrapper{@extend .header__wrapper;padding: 1% 0 1% 0;
+    &__logo{
+        &-img{@extend .header__wrapper__logo-img;}
+    }
+    &-svg{
+        &__svg-wrapper{@extend .header__wrapper-svg;
+            &:not(:last-child){margin-right: 25px;}
+            &__svg{@extend .header__wrapper-svg__svg-wrapper__svg;
+            &:hover{fill: $greenHover; transition: .5s;}
+            }
+        }
+    }
+}

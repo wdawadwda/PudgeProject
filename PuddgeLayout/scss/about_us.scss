@@ -1,0 +1,13 @@
+@import "variables.scss";
+
+/*! About Us
+/*!_________________________________________________________________*/
+
+.section-about-us{min-height: 100vh;
+    &__title-h1{@extend .section-price__title-h1}
+    &__content-wrapper{
+        &__subtitle{text-align: center;}
+        &__btn{@extend .section-price__club-wrapper__btn}
+    }
+    
+}

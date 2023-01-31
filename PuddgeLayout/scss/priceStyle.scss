@@ -1,0 +1,55 @@
+@import "variables.scss";
+/** Price
+/*_________________________________________________________________*/
+.time-collor{@include priceTime;}
+.comfort-collor{@include priceComfort;}
+.vip-zone-collor{@include priceVipZone;}
+.boot-campe-collor{@include priceBootCampe;}
+
+.section-price{background-color: $black;
+    &__title-h1{font-size: 50px; display: flex; @include flexCenter; padding: 50px 0 100px 0;}
+    &__club-wrapper{
+        &__inner{margin-bottom: 50px; border: solid 1px; border-radius: 50px; background-color: #3a0158;
+
+            // background: rgb(70,66,0);
+            // background: linear-gradient(76deg, rgba(70,66,0,1) 0%, rgba(41,41,20,1) 50%, rgba(34,50,0,1) 100%);
+            
+            padding: 50px 25px 50px 25px;
+            &__title{display: flex; @include flexCenter;}
+            &__subtitle{@extend .section-price__club-wrapper__inner__title}
+
+            &__tariff-wrapper{display: flex; @include flexCenter; margin: 50px 0 25px 0;
+                &__item{width: 25%; display: flex; @include flexCenter;}
+            }
+
+            &__time-price-wrapper{display: flex;
+                &:not(:last-child){margin-bottom: 25px;}
+                &__time{width: 25%; text-align: center; display: flex; flex-direction: column; @include flexCenter;
+                    &__detaile{}
+                }
+                &__price{width: 25%; display: flex; @include flexCenter;
+                    &__item{width: 50%; display: flex; @include flexCenter; flex-direction: column;
+                        &__detaile{}
+                    }
+                }
+            }
+            &__bottom-title{margin-bottom: 50px;}
+            &__bonus-wrapper{display: flex;
+                &__item{width: 25%; height: 100%; display: flex; @include flexCenter; flex-direction: column;
+                    &__svg-wrapper{width: 50px; height: 50px; display: flex; @include flexCenter; font-size: 50px;
+                        &:hover{color: $pinkHover; transition: .5s; cursor: default;}
+                        &__svg{width: 50px; height: 50px; fill: $pink;
+                            &:hover{fill: $pinkHover; transition: .5s; cursor: default;}
+                        }
+                    }
+                }
+            }
+        }
+        &__btn{margin: 50px 0 100px 0; font-size: 25px; @include btnPadding; 
+            &:visited{color: black;}
+            &:active{color: black;}
+            &:hover{color: $green; background-color: rgba(148, 192, 42, 0); transition: .5s linear;}
+        }
+    }
+}
+.hidden{visibility: hidden;}

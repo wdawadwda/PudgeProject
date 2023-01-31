@@ -1,0 +1,24 @@
+/* Center
+___________________________________________*/
+
+@mixin flexCenter {align-items: center; justify-content: center;}
+@mixin blockCenter {margin: 0% auto;}
+
+/* Color
+___________________________________________*/
+
+$green: #94C02A;
+$gray: #424040;
+$greenHover: #608112;
+$pink: #f09;
+$pinkHover: rgb(180, 45, 126);
+$black: rgb(22, 21, 21);
+
+$priceComfort: #19c719;
+$priceVipZone: rgb(197, 197, 69);
+$priceBootCampe: red;
+
+@mixin priceTime {color: $green;}
+@mixin priceComfort {color: $priceComfort;}
+@mixin priceVipZone {color: $priceVipZone;}
+@mixin priceBootCampe {color: $pink;}

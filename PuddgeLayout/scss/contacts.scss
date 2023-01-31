@@ -1,0 +1,12 @@
+@import "variables.scss";
+
+/*! Contacts
+/*!_________________________________________________________________*/
+
+.section-contacts{min-height: 100vh;
+    &__title-h1{@extend .section-price__title-h1}
+    &__content-wrapper{
+        &__subtitle{text-align: center;}
+        &__btn{@extend .section-price__club-wrapper__btn}
+    }
+}

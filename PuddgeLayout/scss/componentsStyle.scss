@@ -1,0 +1,27 @@
+@import "variables.scss";
+
+/*! Сomponents
+/*!_________________________________________________________________*/
+
+.components-btn{margin-top: 100px; font-size: 25px; @include btnPadding; color: black;
+    &:visited{color: black;}
+    &:active{color: black;}
+    &:hover{color: $green; background-color: rgba(148, 192, 42, 0); transition: .5s linear;}
+}
+
+.section-components{
+    &__title-h1{@extend .section-price__title-h1}
+    &__content-wrapper{
+        &__subtitle{text-align: center; margin-bottom: 100px;}
+        &__devices-wrapper{display: flex; @include flexCenter;
+            &__dropdown{width: 20%; display: flex; @include flexCenter;
+                &:not(:last-child){margin-right: 50px;}
+                &__item{width: 100%;}
+            }
+        }
+        &__dropdown-list{color: $green;
+            &__dropdown-item{}
+        }
+        &__btn{@extend .section-price__club-wrapper__btn}
+    }
+}
